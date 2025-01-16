@@ -177,7 +177,7 @@
                           :named-parts {:first first-name :last last-name}}
                          (str street-address ", " city ", " state)
                          city state
-                         (str street-address ", " city ", " state)]
+                            (str street-address ", " city ", " state)]
                    "___" [(fn [[fname lname]
                               {:keys [street-address city state]}]
                             (str fname " " lname ", "

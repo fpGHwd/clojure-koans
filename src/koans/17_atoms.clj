@@ -5,16 +5,16 @@
 
 (meditations
   "Atoms are like refs"
-  (= __ @atomic-clock)
+  (= 0 @atomic-clock)
 
   "You can change at the swap meet"
-  (= __ (do
+  (= 1 (do
           (swap! atomic-clock inc)
           @atomic-clock))
 
   "Keep taxes out of this: swapping requires no transaction"
   (= 5 (do
-         __
+         (swap! atomic-clock (partial + 4))
          @atomic-clock))
 
   "Any number of arguments might happen during a swap"

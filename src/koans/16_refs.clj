@@ -40,3 +40,4 @@
           (alter the-world assoc :jerry "Real Jerry")
           (alter bizarro-world assoc :jerry "Bizarro Jerry")
           (map :jerry [@the-world @bizarro-world])))))
+;; TODO: this is unclear for me
