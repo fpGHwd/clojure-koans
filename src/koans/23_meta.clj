@@ -7,13 +7,14 @@
 
 (meditations
   "Some objects can be tagged using the with-meta function"
-  (= __ (meta giants))
+  (= {:league "National League"} (meta giants))
 
   "Or more succinctly with a reader macro"
-  (= __ (meta '^{:division "West"} Giants))
+  (= {:division "West"} (meta '^{:division "West"} Giants))
+  ;; clojure 的 reader macro 是什么，这里面的读取宏形式是什么？
 
   "While others can't"
-  (= __ (try
+  (= "This doesn't implement the IObj interface" (try
           (with-meta
             2
             {:prime true})
