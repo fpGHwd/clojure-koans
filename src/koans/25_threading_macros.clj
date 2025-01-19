@@ -47,12 +47,12 @@
         (function-that-takes-a-map "hello" "there")))
 
  "We can also thread last using ->>"
- (= __
+ (= [2 3 4]
     (->> [1 2 3]
          (map inc)))
 
  "Most operations that take a collection can be threaded-last"
- (= __
+ (= 12
     (->> a-list
          (map inc)
          (filter even?)
@@ -60,7 +60,7 @@
          (reduce +)))
 
  "We can use functions we have written ourselves that follow this pattern"
- (= __
+ (= [1 2 3]
     (->> a-list-with-maps
          (function-that-takes-a-coll "hello" "there")
          (into []))))
