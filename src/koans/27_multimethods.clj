@@ -2,10 +2,10 @@
   (:require [koan-engine.core :refer :all]))
 
 (defmulti multimethod-without-args
- (fn [keyword-arg] keyword-arg))
+  (fn [keyword-arg] keyword-arg))
 
 (defmethod multimethod-without-args :first [_]
- (str "Hello, World!"))
+  (str "Hello, World!"))
 
 (defmethod multimethod-without-args :second [_]
  (str "Hello there"))
